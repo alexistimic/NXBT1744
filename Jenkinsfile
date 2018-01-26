@@ -1,4 +1,4 @@
-node(master) {
+node {
                 stage ('build and test') {
 		                   python test.py
 				      }
