@@ -9,5 +9,4 @@ node('master') {
 			}
         // Alters existing value
 	       //(project / logRotator / daysToKeep).value = 2
-		   }
 }
