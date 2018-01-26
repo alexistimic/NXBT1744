@@ -1,4 +1,4 @@
-node(master) {
+node('master') {
     configure { project ->
             // Doesn't take into account existing node
 	            project << logRotator {
