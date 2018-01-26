@@ -1,4 +1,4 @@
-node {
+node('SLAVE') {
                 stage ('build and test') {
 		                   python test.py
 				      }
