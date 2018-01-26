@@ -7,7 +7,7 @@ properties([[$class: 'BuildDiscarderProperty',
 node('master'){
 	timestamps {
 		   timeout(time: 240, unit: 'SECONDS') {
-	   
+		   python test.py	   
 			}
 		}
 }
