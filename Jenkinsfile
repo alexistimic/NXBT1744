@@ -1,12 +1,7 @@
-node('master') {
-            properties {
-	            logRotator {
-		                daysToKeep(-1)
-				            numToKeep(10)
-					                artifactDaysToKeep(-1)
-							            artifactNumToKeep(-1)
-								            }
-			}
-        // Alters existing value
-	       //(project / logRotator / daysToKeep).value = 2
-}
+node('master'){
+	properties([[$class: 'BuildDiscarderProperty',
+		     strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '',
+		     artifactNumToKeepStr: '1',
+		     daysToKeepStr: '60',
+		     numToKeepStr: '60']]])
+		}
