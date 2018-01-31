@@ -12,6 +12,10 @@ properties([
 node('master'){
 	timestamps {
 		   timeout(time: 240, unit: 'MINUTES') {
+
+
+
+
 			}
 		}
 }
