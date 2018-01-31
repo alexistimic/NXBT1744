@@ -12,7 +12,7 @@ properties([
 node('master'){
 	timestamps {
 		   timeout(time: 240, unit: 'MINUTES') {
-		   sh 'python test.py'	   
+		   #sh 'python test.py'	   
 			}
 		}
 }
