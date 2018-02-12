@@ -1,6 +1,5 @@
 properties([
-    [$class: 'BuildDiscarderProperty', strategy: 
-	[$class: 'LogRotator', daysToKeepStr: '60', numToKeepStr: '30', artifactNumToKeepStr: '1']],
+    [$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', daysToKeepStr: '60', numToKeepStr: '30', artifactNumToKeepStr: '1']],
     disableConcurrentBuilds(),
     [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/nuxeo/'],
     [$class: 'RebuildSettings', autoRebuild: false, rebuildDisabled: false],
