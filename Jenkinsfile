@@ -13,8 +13,9 @@ node('master'){
 	timestamps {
 		   timeout(time: 240, unit: 'MINUTES') {
 
-
-
+			if (![$class: 'BuildDiscarderProperty']) {
+				mail bcc: '', body: 'This is a test', cc: '', from: '', replyTo: '', subject: 'pipeline_discardbuild_test', to: 'atimic@nuxeo.com'
+			}
 			echo "Modification"
 			}
 		}
