@@ -14,12 +14,12 @@ node('master'){
 		   timeout(time: 240, unit: 'MINUTES') {
 
 			if (![$class: 'BuildDiscarderProperty']) {
-				mail bcc: '', body: 'This is a test', cc: '', from: '', replyTo: '', subject: 'pipeline_discardbuild_test', to: 'atimic@nuxeo.com'
+				mail bcc: '', body: 'Builddiscarder does not exists', cc: '', from: '', replyTo: '', subject: 'pipeline_discardbuild_test', to: 'atimic@nuxeo.com'
 			}
 			else {
-			mail bcc: '', body: 'This is a test, builddiscarder exists', cc: '', from: '', replyTo: '', subject: 'pipeline_discardbuild_test', to: 'atimic@nuxeo.com'
+			mail bcc: '', body: 'builddiscarder exists', cc: '', from: '', replyTo: '', subject: 'pipeline_discardbuild_test', to: 'atimic@nuxeo.com'
 			}
-			echo "Modification"
+			echo "Hello world"
 			}
 		}
 }
